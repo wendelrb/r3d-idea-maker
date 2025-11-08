@@ -19,12 +19,13 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            <span className="bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
-              R3D Soluções Personalizadas
-            </span>
+            <span className="text-foreground">R3D </span>
+            <span className="text-primary">Soluções</span>
+            <br />
+            <span className="text-primary">Personalizadas</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-foreground/90 max-w-2xl mx-auto">
             Impressão 3D feita sob medida para você. Damos vida às suas ideias com tecnologia e criatividade.
           </p>
           

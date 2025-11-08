@@ -47,10 +47,10 @@ const Gallery = () => {
             <span className="text-primary font-bold text-lg tracking-wider uppercase">
               Portfólio
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Nossos <span className="text-primary">Trabalhos</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/90 max-w-3xl mx-auto">
               Conheça alguns dos projetos que desenvolvemos com paixão e tecnologia
             </p>
           </div>

@@ -58,10 +58,10 @@ const Services = () => {
             <span className="text-primary font-bold text-lg tracking-wider uppercase">
               Nossos Serviços
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               O que <span className="text-primary">fazemos</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/90 max-w-3xl mx-auto">
               Do protótipo ao produto final, criamos, personalizamos e inovamos com impressão 3D
             </p>
           </div>
@@ -81,7 +81,7 @@ const Services = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <p className="text-foreground/80">{service.description}</p>
                 </CardContent>
               </Card>
             ))}

@@ -33,10 +33,10 @@ const About = () => {
             <span className="text-primary font-bold text-lg tracking-wider uppercase">
               Sobre Nós
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Paixão por <span className="text-primary">Inovação</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/90 max-w-3xl mx-auto">
               Somos apaixonados por transformar ideias em objetos reais. Na R3D, unimos tecnologia, 
               precisão e criatividade para entregar produtos únicos, funcionais e personalizados.
             </p>
@@ -52,8 +52,8 @@ const About = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary">
                     <feature.icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-foreground">{feature.title}</h3>
+                  <p className="text-foreground/80">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}

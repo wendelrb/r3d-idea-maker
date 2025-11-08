@@ -10,36 +10,36 @@ const Footer = () => {
               <h3 className="text-2xl font-bold">
                 <span className="text-primary">R3D</span> Soluções
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-foreground/80">
                 Transformamos ideias em realidade com tecnologia 3D.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-bold text-lg">Links Rápidos</h4>
+              <h4 className="font-bold text-lg text-foreground">Links Rápidos</h4>
               <nav className="flex flex-col space-y-2">
-                <a href="#sobre" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#sobre" className="text-foreground/80 hover:text-primary transition-colors">
                   Sobre Nós
                 </a>
-                <a href="#servicos" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#servicos" className="text-foreground/80 hover:text-primary transition-colors">
                   Serviços
                 </a>
-                <a href="#galeria" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#galeria" className="text-foreground/80 hover:text-primary transition-colors">
                   Portfólio
                 </a>
-                <a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#contato" className="text-foreground/80 hover:text-primary transition-colors">
                   Contato
                 </a>
               </nav>
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-bold text-lg">Redes Sociais</h4>
+              <h4 className="font-bold text-lg text-foreground">Redes Sociais</h4>
               <a 
                 href="https://instagram.com/r3d_personalizados" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors"
               >
                 <Instagram className="w-5 h-5" />
                 @r3d_personalizados
@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="border-t border-border/50 pt-8 text-center text-muted-foreground text-sm">
+          <div className="border-t border-border/50 pt-8 text-center text-foreground/70 text-sm">
             <p>&copy; {new Date().getFullYear()} R3D Soluções Personalizadas. Todos os direitos reservados.</p>
           </div>
         </div>

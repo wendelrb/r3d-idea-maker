@@ -14,10 +14,10 @@ const Contact = () => {
             <span className="text-primary font-bold text-lg tracking-wider uppercase">
               Entre em Contato
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Tem uma <span className="text-primary">ideia</span> em mente?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground max-w-3xl mx-auto">
               Nós a tornamos realidade com impressão 3D de alta qualidade
             </p>
           </div>
@@ -28,8 +28,8 @@ const Contact = () => {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary">
                   <MapPin className="w-7 h-7" />
                 </div>
-                <h3 className="font-bold text-lg">Localização</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="font-bold text-lg text-foreground">Localização</h3>
+                <p className="text-foreground/80 text-sm">
                   Avenida Júlio Borella, 565<br />
                   Marau, Rio Grande do Sul
                 </p>
@@ -41,12 +41,12 @@ const Contact = () => {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary">
                   <Instagram className="w-7 h-7" />
                 </div>
-                <h3 className="font-bold text-lg">Instagram</h3>
+                <h3 className="font-bold text-lg text-foreground">Instagram</h3>
                 <a 
                   href="https://instagram.com/r3d_personalizados" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                  className="text-foreground/80 text-sm hover:text-primary transition-colors"
                 >
                   @r3d_personalizados
                 </a>
@@ -58,8 +58,8 @@ const Contact = () => {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary">
                   <MessageCircle className="w-7 h-7" />
                 </div>
-                <h3 className="font-bold text-lg">WhatsApp</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="font-bold text-lg text-foreground">WhatsApp</h3>
+                <p className="text-foreground/80 text-sm">
                   Resposta rápida<br />
                   para orçamentos
                 </p>
