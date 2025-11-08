@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="font-bold text-lg text-foreground">Redes Sociais</h4>
               <a 
-                href="https://instagram.com/r3d_personalizados" 
+                href="https://www.instagram.com/r3d_personalizados/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors"

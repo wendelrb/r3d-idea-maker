@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
                 <h3 className="font-bold text-lg text-foreground">Instagram</h3>
                 <a 
-                  href="https://instagram.com/r3d_personalizados" 
+                  href="https://www.instagram.com/r3d_personalizados/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground/80 text-sm hover:text-primary transition-colors"
