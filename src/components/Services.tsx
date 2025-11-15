@@ -74,8 +74,8 @@ const Services = () => {
               >
                 <CardHeader>
                   <div className="flex items-center gap-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                      <service.icon className="w-6 h-6" />
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                      <service.icon className="w-8 h-8" />
                     </div>
                     <CardTitle className="text-lg">{service.title}</CardTitle>
                   </div>
