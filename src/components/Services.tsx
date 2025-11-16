@@ -1,52 +1,70 @@
 import { Box, Layers, Palette, Cog, Home, User, Lightbulb, Type, Coffee } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import bonecoViolao from "@/assets/gallery/boneco-violao.png";
+import chaveiros from "@/assets/gallery/chaveiros.png";
+import engrenagens from "@/assets/gallery/engrenagens.png";
+import letraLara from "@/assets/gallery/letra-lara.png";
+import pecasAutomotivas from "@/assets/gallery/pecas-automotivas.png";
+import bonecosArticulados from "@/assets/gallery/bonecos-articulados.jpg";
+import decoracoesNatal from "@/assets/gallery/decoracoes-natal.jpg";
+import utilitariosStar from "@/assets/gallery/utilitarios-star.jpg";
+import colecaoPrateleira from "@/assets/gallery/colecao-prateleira.jpg";
 
 const Services = () => {
   const services = [
     {
       icon: Box,
       title: "Impressão 3D sob medida",
-      description: "Qualquer projeto, do mais simples ao mais complexo"
+      description: "Qualquer projeto, do mais simples ao mais complexo",
+      image: bonecoViolao
     },
     {
       icon: Layers,
       title: "Criação e modelagem",
-      description: "Protótipos profissionais para seus projetos"
+      description: "Protótipos profissionais para seus projetos",
+      image: engrenagens
     },
     {
       icon: Palette,
       title: "Personalização de produtos",
-      description: "Deixe sua marca em cada peça"
+      description: "Deixe sua marca em cada peça",
+      image: chaveiros
     },
     {
       icon: Cog,
       title: "Peças técnicas e automotivas",
-      description: "Substituição e customização de peças"
+      description: "Substituição e customização de peças",
+      image: pecasAutomotivas
     },
     {
       icon: Home,
       title: "Maquetes arquitetônicas",
-      description: "Visualize seus projetos em 3D"
+      description: "Visualize seus projetos em 3D",
+      image: colecaoPrateleira
     },
     {
       icon: User,
       title: "Bonecos e figuras",
-      description: "Colecionáveis personalizados"
+      description: "Colecionáveis personalizados",
+      image: bonecosArticulados
     },
     {
       icon: Lightbulb,
       title: "Decorações e luminárias",
-      description: "Peças únicas para seu ambiente"
+      description: "Peças únicas para seu ambiente",
+      image: decoracoesNatal
     },
     {
       icon: Type,
       title: "Letreiros personalizados",
-      description: "Identidade visual em 3D"
+      description: "Identidade visual em 3D",
+      image: letraLara
     },
     {
       icon: Coffee,
       title: "Copos térmicos e brindes",
-      description: "Presentes exclusivos e funcionais"
+      description: "Presentes exclusivos e funcionais",
+      image: utilitariosStar
     }
   ];
 
@@ -70,7 +88,7 @@ const Services = () => {
             {services.map((service, index) => (
               <Card 
                 key={index}
-                className="group border-border/50 bg-card/50 backdrop-blur hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10"
+                className="group border-border/50 bg-card/50 backdrop-blur hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10 overflow-hidden"
               >
                 <CardHeader>
                   <div className="flex items-center gap-4">
@@ -80,7 +98,14 @@ const Services = () => {
                     <CardTitle className="text-lg">{service.title}</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-3">
+                  <div className="w-full h-32 rounded-lg overflow-hidden bg-muted/50">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
                   <p className="text-foreground/80">{service.description}</p>
                 </CardContent>
               </Card>
