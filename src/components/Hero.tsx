@@ -91,10 +91,11 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="text-foreground">R3D </span>
-              <span className="text-primary">Soluções</span>
+              <span className="text-black dark:text-white">R</span>
+              <span className="text-primary">3D </span>
+              <span className="text-white">Soluções</span>
               <br />
-              <span className="text-primary">Personalizadas</span>
+              <span className="text-white">Personalizadas</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-foreground/90">

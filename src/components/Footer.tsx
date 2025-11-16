@@ -8,7 +8,8 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold">
-                <span className="text-primary">R3D</span> Soluções
+                <span className="text-black dark:text-white">R</span>
+                <span className="text-primary">3D</span> Soluções
               </h3>
               <p className="text-foreground/80">
                 Transformamos ideias em realidade com tecnologia 3D.

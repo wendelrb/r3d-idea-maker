@@ -34,8 +34,9 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="text-2xl font-bold">
-            <span className="text-primary">R3D</span>
-            <span className="text-foreground"> Soluções</span>
+            <span className="text-black dark:text-white">R</span>
+            <span className="text-primary">3D</span>
+            <span className="text-white"> Soluções</span>
           </a>
 
           {/* Desktop Navigation */}
