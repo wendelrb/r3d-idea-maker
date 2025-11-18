@@ -47,8 +47,14 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-secondary to-background">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,0,0,0.1),transparent_50%)]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_20%_20%,hsl(0,0%,96%)_0%,hsl(0,0%,92%)_45%,hsl(0,0%,96%)_100%)]">
+      {/* Realce suave em vermelho para identidade */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_140%,rgba(255,0,0,0.08),transparent_60%)]" />
+      {/* Vignette no topo para dar contraste ao header (mais escuro) */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
+      {/* Vignette nas laterais superiores para reforçar contraste (mais escuro) */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,0.28),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,0,0,0.28),transparent_55%)]" />
       
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
@@ -91,11 +97,11 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="text-black dark:text-white">R</span>
+              <span className="text-[hsl(0,0%,10%)]">R</span>
               <span className="text-primary">3D </span>
-              <span className="text-white">Soluções</span>
+              <span className="text-[hsl(0,0%,10%)]">Soluções</span>
               <br />
-              <span className="text-white">Personalizadas</span>
+              <span className="text-[hsl(0,0%,10%)]">Personalizadas</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-foreground/90">

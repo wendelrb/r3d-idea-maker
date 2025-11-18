@@ -9,7 +9,8 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold">
                 <span className="text-black dark:text-white">R</span>
-                <span className="text-primary">3D</span> Soluções
+                <span className="text-primary">3D</span>
+                <span className="text-white"> Soluções</span>
               </h3>
               <p className="text-foreground/80">
                 Transformamos ideias em realidade com tecnologia 3D.
