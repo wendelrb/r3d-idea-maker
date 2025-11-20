@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_20%_20%,hsl(0,0%,96%)_0%,hsl(0,0%,92%)_45%,hsl(0,0%,96%)_100%)]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_20%_20%,hsl(0,0%,96%)_0%,hsl(0,0%,92%)_45%,hsl(0,0%,96%)_100%)] py-16 lg:py-0">
       {/* Realce suave em vermelho para identidade */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_140%,rgba(255,0,0,0.08),transparent_60%)]" />
       {/* Vignette no topo para dar contraste ao header (mais escuro) */}
@@ -37,8 +37,8 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,0.28),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,0,0,0.28),transparent_55%)]" />
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 py-4 sm:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-3 sm:gap-12 items-center max-w-7xl mx-auto">
           {/* Carrossel de Imagens */}
           <div className="animate-in fade-in slide-in-from-left-4 duration-1000">
             <Carousel
@@ -51,12 +51,12 @@ const Hero = () => {
                   delay: 3000,
                 }),
               ]}
-              className="w-full"
+              className="w-full max-w-md mx-auto lg:max-w-none"
             >
               <CarouselContent>
                 {carouselImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative aspect-square rounded-2xl overflow-hidden bg-secondary/50 backdrop-blur-sm border border-primary/20">
+                    <div className="relative aspect-square max-h-[40vh] lg:max-h-none rounded-2xl overflow-hidden bg-secondary/50 backdrop-blur-sm border border-primary/20">
                       <img
                         src={image.src}
                         alt={image.alt}
@@ -70,38 +70,38 @@ const Hero = () => {
           </div>
 
           {/* Conteúdo de Texto */}
-          <div className="space-y-8 animate-in fade-in slide-in-from-right-4 duration-1000">
+          <div className="space-y-2 sm:space-y-8 animate-in fade-in slide-in-from-right-4 duration-1000">
             <div className="inline-block">
-              <span className="text-primary font-bold text-lg tracking-wider uppercase">
+              <span className="text-primary font-bold text-sm sm:text-lg tracking-wider uppercase">
                 Tecnologia 3D
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight">
               <span className="text-[hsl(0,0%,10%)]">R</span>
               <span className="text-primary">3D </span>
               <span className="text-[hsl(0,0%,10%)]">Soluções</span>
-              <br />
+              {" "}
               <span className="text-[hsl(0,0%,10%)]">Personalizadas</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-foreground/90">
+            <p className="text-xs sm:text-xl md:text-2xl text-foreground/90 leading-relaxed">
               Impressão 3D feita sob medida para você. Damos vida às suas ideias com tecnologia e criatividade.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-2 pt-1 sm:pt-4">
               <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 group"
+                size="default"
+                className="text-xs sm:text-lg px-4 py-3 sm:px-8 sm:py-6 group w-full sm:w-auto"
                 onClick={scrollToContact}
               >
                 Peça seu orçamento agora
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
-                size="lg" 
+                size="default"
                 variant="outline" 
-                className="text-lg px-8 py-6 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-primary"
+                className="text-xs sm:text-lg px-4 py-3 sm:px-8 sm:py-6 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-primary w-full sm:w-auto"
                 onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Conheça nossos serviços
