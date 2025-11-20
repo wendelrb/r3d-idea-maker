@@ -1,43 +1,21 @@
-import letraLara from "@/assets/gallery/letra-lara.png";
-import lorenzo from "@/assets/gallery/lorenzo.png";
-import bonecoViolao from "@/assets/gallery/boneco-violao.png";
-import pecasAutomotivas from "@/assets/gallery/pecas-automotivas.png";
-import engrenagens from "@/assets/gallery/engrenagens.png";
-import chaveiros from "@/assets/gallery/chaveiros.png";
+// Carregar dinamicamente todas as imagens que existem hoje na pasta gallery
+const galleryModules = import.meta.glob("@/assets/gallery/*.{png,jpg,jpeg,webp}", { eager: true });
 
 const Gallery = () => {
-  const images = [
-    {
-      src: letraLara,
-      alt: "Letra L roxa personalizada com nome Lara - Impressão 3D",
-      title: "Letreiros 3D"
-    },
-    {
-      src: lorenzo,
-      alt: "Nome Lorenzo impresso em 3D branco - Decoração personalizada",
-      title: "Nomes Personalizados"
-    },
-    {
-      src: bonecoViolao,
-      alt: "Boneco articulado tocando violão - Figura 3D personalizada",
-      title: "Figuras Articuladas"
-    },
-    {
-      src: pecasAutomotivas,
-      alt: "Peças automotivas impressas em 3D - Buchas e componentes",
-      title: "Peças Automotivas"
-    },
-    {
-      src: engrenagens,
-      alt: "Engrenagens mecânicas amarelas e pretas impressas em 3D",
-      title: "Peças Técnicas"
-    },
-    {
-      src: chaveiros,
-      alt: "Chaveiros de halteres coloridos impressos em 3D",
-      title: "Chaveiros Criativos"
-    }
-  ];
+  const images = Object.keys(galleryModules)
+    .sort()
+    .filter((path) => {
+      const filename = path.split("/").pop() || "";
+      // Excluir fotos brutas de WhatsApp/telefone que começam com IMG-
+      return !/^IMG-/i.test(filename);
+    })
+    .map((path) => {
+      const mod = galleryModules[path] as { default: string };
+      const filename = path.split("/").pop() || "imagem-3d";
+      const base = filename.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ").trim();
+      const title = base.charAt(0).toUpperCase() + base.slice(1);
+      return { src: (mod as any).default, alt: base, title };
+    });
 
   return (
     <section className="py-24 bg-secondary/30" id="galeria">

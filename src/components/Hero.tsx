@@ -8,40 +8,21 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 // Importar as imagens
-import bonecoViolao from "@/assets/gallery/boneco-violao.png";
-import chaveiros from "@/assets/gallery/chaveiros.png";
-import engrenagens from "@/assets/gallery/engrenagens.png";
-import letraLara from "@/assets/gallery/letra-lara.png";
-import lorenzo from "@/assets/gallery/lorenzo.png";
-import pecasAutomotivas from "@/assets/gallery/pecas-automotivas.png";
-import decoracoesVariadas from "@/assets/gallery/decoracoes-variadas.jpg";
-import animaisMarinhos from "@/assets/gallery/animais-marinhos.jpg";
-import batman from "@/assets/gallery/batman.jpg";
-import colecaoPrateleira from "@/assets/gallery/colecao-prateleira.jpg";
-import personagensVariados from "@/assets/gallery/personagens-variados.jpg";
-import bonecosArticulados from "@/assets/gallery/bonecos-articulados.jpg";
-import personagensFofinhos from "@/assets/gallery/personagens-fofinhos.jpg";
-import utilitariosStar from "@/assets/gallery/utilitarios-star.jpg";
-import decoracoesNatal from "@/assets/gallery/decoracoes-natal.jpg";
+// Carregar automaticamente todas as imagens da pasta gallery
+const galleryModules = import.meta.glob("@/assets/gallery/*.{png,jpg,jpeg,webp}", { eager: true });
 
 const Hero = () => {
-  const carouselImages = [
-    { src: bonecoViolao, alt: "Boneco com violão impresso em 3D" },
-    { src: chaveiros, alt: "Chaveiros personalizados em 3D" },
-    { src: engrenagens, alt: "Engrenagens impressas em 3D" },
-    { src: letraLara, alt: "Letra Lara personalizada em 3D" },
-    { src: lorenzo, alt: "Peça Lorenzo em 3D" },
-    { src: pecasAutomotivas, alt: "Peças automotivas impressas em 3D" },
-    { src: decoracoesVariadas, alt: "Decorações variadas impressas em 3D" },
-    { src: animaisMarinhos, alt: "Animais marinhos impressos em 3D" },
-    { src: batman, alt: "Action figure Batman impresso em 3D" },
-    { src: colecaoPrateleira, alt: "Coleção de peças 3D em prateleira" },
-    { src: personagensVariados, alt: "Personagens variados impressos em 3D" },
-    { src: bonecosArticulados, alt: "Bonecos articulados impressos em 3D" },
-    { src: personagensFofinhos, alt: "Personagens fofinhos impressos em 3D" },
-    { src: utilitariosStar, alt: "Utilitários e decorações em 3D" },
-    { src: decoracoesNatal, alt: "Decorações de Natal impressas em 3D" },
-  ];
+  const carouselImages = Object.keys(galleryModules)
+    .sort()
+    .map((path) => {
+      const mod = galleryModules[path] as { default: string };
+      const filename = path.split("/").pop() || "imagem-3d";
+      const alt = filename
+        .replace(/\.[^.]+$/, "")
+        .replace(/[-_]/g, " ")
+        .trim();
+      return { src: (mod as any).default, alt };
+    });
   const scrollToContact = () => {
     document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   };

@@ -1,7 +1,5 @@
 import { Box, Layers, Palette, Cog, Home, User, Lightbulb, Type, Coffee } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import bonecoViolao from "@/assets/gallery/boneco-violao.png";
-import chaveiros from "@/assets/gallery/chaveiros.png";
 import engrenagens from "@/assets/gallery/engrenagens.png";
 import letraLara from "@/assets/gallery/letra-lara.png";
 import pecasAutomotivas from "@/assets/gallery/pecas-automotivas.png";
@@ -9,6 +7,9 @@ import bonecosArticulados from "@/assets/gallery/bonecos-articulados.jpg";
 import decoracoesNatal from "@/assets/gallery/decoracoes-natal.jpg";
 import utilitariosStar from "@/assets/gallery/utilitarios-star.jpg";
 import colecaoPrateleira from "@/assets/gallery/colecao-prateleira.jpg";
+import coposTermicos from "@/assets/gallery/copos-termicos.jpg";
+import impressao3d from "@/assets/gallery/impressão3d.webp";
+import decoracoesVariadas from "@/assets/gallery/decoracoes-variadas.jpg";
 
 const Services = () => {
   const services = [
@@ -16,7 +17,7 @@ const Services = () => {
       icon: Box,
       title: "Impressão 3D sob medida",
       description: "Qualquer projeto, do mais simples ao mais complexo",
-      image: bonecoViolao
+      image: impressao3d
     },
     {
       icon: Layers,
@@ -28,7 +29,7 @@ const Services = () => {
       icon: Palette,
       title: "Personalização de produtos",
       description: "Deixe sua marca em cada peça",
-      image: chaveiros
+      image: decoracoesVariadas
     },
     {
       icon: Cog,
@@ -64,7 +65,7 @@ const Services = () => {
       icon: Coffee,
       title: "Copos térmicos e brindes",
       description: "Presentes exclusivos e funcionais",
-      image: utilitariosStar
+      image: coposTermicos
     }
   ];
 
@@ -99,11 +100,11 @@ const Services = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="w-full h-32 rounded-lg overflow-hidden bg-muted/50">
-                    <img 
-                      src={service.image} 
+                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-muted/50">
+                    <img
+                      src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className={`absolute inset-0 w-full h-full object-center transition-transform duration-300 ${service.title === "Impressão 3D sob medida" ? "object-contain p-2 group-hover:scale-105" : "object-cover group-hover:scale-110"}`}
                     />
                   </div>
                   <p className="text-foreground/80">{service.description}</p>
