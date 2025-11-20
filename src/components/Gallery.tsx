@@ -2,19 +2,36 @@
 const galleryModules = import.meta.glob("@/assets/gallery/*.{png,jpg,jpeg,webp}", { eager: true });
 
 const Gallery = () => {
+  const priorityOrder = [
+    "impressoes-3d-sob-medida.jpg",
+    "criacao-em-modelagem.jpg",
+    "silo-em-maquete.jpg",
+  ];
+
   const images = Object.keys(galleryModules)
-    .sort()
     .filter((path) => {
-      const filename = path.split("/").pop() || "";
+      const filename = (path.split("/").pop() || "").toLowerCase();
       // Excluir fotos brutas de WhatsApp/telefone que começam com IMG-
-      return !/^IMG-/i.test(filename);
+      // e ocultar especificamente bonecosefiguras.jpg
+      return !/^img-/i.test(filename) && filename !== "bonecosefiguras.jpg";
+    })
+    .sort((a, b) => {
+      const nameA = (a.split("/").pop() || "").toLowerCase();
+      const nameB = (b.split("/").pop() || "").toLowerCase();
+      const idxA = priorityOrder.indexOf(nameA);
+      const idxB = priorityOrder.indexOf(nameB);
+      const rankA = idxA === -1 ? Infinity : idxA;
+      const rankB = idxB === -1 ? Infinity : idxB;
+      if (rankA !== rankB) return rankA - rankB;
+      return a.localeCompare(b);
     })
     .map((path) => {
-      const mod = galleryModules[path] as { default: string };
+      const mod = galleryModules[path] as any;
+      const src = mod && typeof mod === "object" && "default" in mod ? (mod as { default: string }).default : (mod as string);
       const filename = path.split("/").pop() || "imagem-3d";
       const base = filename.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ").trim();
       const title = base.charAt(0).toUpperCase() + base.slice(1);
-      return { src: (mod as any).default, alt: base, title };
+      return { src, alt: base, title };
     });
 
   return (

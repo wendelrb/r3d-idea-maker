@@ -3,13 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import engrenagens from "@/assets/gallery/engrenagens.png";
 import letraLara from "@/assets/gallery/letra-lara.png";
 import pecasAutomotivas from "@/assets/gallery/pecas-automotivas.png";
-import bonecosArticulados from "@/assets/gallery/bonecos-articulados.jpg";
+import bonecosefiguras from "@/assets/gallery/bonecosefiguras.jpg";
 import decoracoesNatal from "@/assets/gallery/decoracoes-natal.jpg";
-import utilitariosStar from "@/assets/gallery/utilitarios-star.jpg";
-import colecaoPrateleira from "@/assets/gallery/colecao-prateleira.jpg";
+import utilitariosStar from "@/assets/gallery/utilitarios.jpg";
 import coposTermicos from "@/assets/gallery/copos-termicos.jpg";
-import impressao3d from "@/assets/gallery/impressão3d.webp";
 import decoracoesVariadas from "@/assets/gallery/decoracoes-variadas.jpg";
+import impressoes3dsobmedida from "@/assets/gallery/impressoes-3d-sob-medida.jpg";
+import criacaoemodelagem from "@/assets/gallery/criacao-e-modelagem.jpg";
+import siloemmaquete from "@/assets/gallery/silo-em-maquete.jpg";
 
 const Services = () => {
   const services = [
@@ -17,13 +18,13 @@ const Services = () => {
       icon: Box,
       title: "Impressão 3D sob medida",
       description: "Qualquer projeto, do mais simples ao mais complexo",
-      image: impressao3d
+      image: impressoes3dsobmedida
     },
     {
       icon: Layers,
       title: "Criação e modelagem",
       description: "Protótipos profissionais para seus projetos",
-      image: engrenagens
+      image: criacaoemodelagem
     },
     {
       icon: Palette,
@@ -41,13 +42,13 @@ const Services = () => {
       icon: Home,
       title: "Maquetes arquitetônicas",
       description: "Visualize seus projetos em 3D",
-      image: colecaoPrateleira
+      image: siloemmaquete
     },
     {
       icon: User,
       title: "Bonecos e figuras",
       description: "Colecionáveis personalizados",
-      image: bonecosArticulados
+      image: bonecosefiguras
     },
     {
       icon: Lightbulb,
@@ -104,7 +105,13 @@ const Services = () => {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className={`absolute inset-0 w-full h-full object-center transition-transform duration-300 ${service.title === "Impressão 3D sob medida" ? "object-contain p-2 group-hover:scale-105" : "object-cover group-hover:scale-110"}`}
+                      className={`absolute inset-0 w-full h-full object-center transition-transform duration-300 ${
+                        service.title === "Impressão 3D sob medida"
+                          ? "object-contain p-2 group-hover:scale-105"
+                          : service.title === "Maquetes arquitetônicas"
+                          ? "object-cover group-hover:scale-105"
+                          : "object-cover group-hover:scale-110"
+                      }`}
                     />
                   </div>
                   <p className="text-foreground/80">{service.description}</p>
