@@ -12,7 +12,13 @@ import Autoplay from "embla-carousel-autoplay";
 const galleryModules = import.meta.glob("@/assets/gallery/*.{png,jpg,jpeg,webp}", { eager: true });
 
 const Hero = () => {
+  const excluded = new Set(["maquete.jpg", "personalizacao-de-produtos.jpg"]);
   const carouselImages = Object.keys(galleryModules)
+    .filter((path) => {
+      const filename = (path.split("/").pop() || "").toLowerCase();
+      // Ocultar imagens exclusivas dos cards e evitar brutas de WhatsApp
+      return !excluded.has(filename) && !/^img-/i.test(filename);
+    })
     .sort()
     .map((path) => {
       const mod = galleryModules[path] as { default: string };

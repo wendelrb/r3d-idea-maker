@@ -12,8 +12,13 @@ const Gallery = () => {
     .filter((path) => {
       const filename = (path.split("/").pop() || "").toLowerCase();
       // Excluir fotos brutas de WhatsApp/telefone que começam com IMG-
-      // e ocultar especificamente bonecosefiguras.jpg
-      return !/^img-/i.test(filename) && filename !== "bonecosefiguras.jpg";
+      // e ocultar especificamente bonecosefiguras.jpg, maquete.jpg e personalizacao-de-produtos.jpg
+      return (
+        !/^img-/i.test(filename) &&
+        filename !== "bonecosefiguras.jpg" &&
+        filename !== "maquete.jpg" &&
+        filename !== "personalizacao-de-produtos.jpg"
+      );
     })
     .sort((a, b) => {
       const nameA = (a.split("/").pop() || "").toLowerCase();

@@ -8,9 +8,10 @@ import decoracoesNatal from "@/assets/gallery/decoracoes-natal.jpg";
 import utilitariosStar from "@/assets/gallery/utilitarios.jpg";
 import coposTermicos from "@/assets/gallery/copos-termicos.jpg";
 import decoracoesVariadas from "@/assets/gallery/decoracoes-variadas.jpg";
+import personalizacaodeprodutos from "@/assets/gallery/personalizacao-de-produtos.jpg";
 import impressoes3dsobmedida from "@/assets/gallery/impressoes-3d-sob-medida.jpg";
 import criacaoemodelagem from "@/assets/gallery/criacao-e-modelagem.jpg";
-import siloemmaquete from "@/assets/gallery/silo-em-maquete.jpg";
+import maquete from "@/assets/gallery/maquete.jpg";
 
 const Services = () => {
   const services = [
@@ -30,7 +31,7 @@ const Services = () => {
       icon: Palette,
       title: "Personalização de produtos",
       description: "Deixe sua marca em cada peça",
-      image: decoracoesVariadas
+      image: personalizacaodeprodutos
     },
     {
       icon: Cog,
@@ -42,7 +43,7 @@ const Services = () => {
       icon: Home,
       title: "Maquetes arquitetônicas",
       description: "Visualize seus projetos em 3D",
-      image: siloemmaquete
+      image: maquete
     },
     {
       icon: User,
