@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, Instagram, MapPin, MessageCircle, Clock } from "lucide-react";
 
 const Contact = () => {
-  const whatsappNumber = "555493019191"; // Número para wa.me (sem + e sem espaços)
+  const whatsappNumber = "5554993019191";
   const addressString = "Avenida Júlio Borella, 565, Marau, Rio Grande do Sul, Brazil 99150-000";
 
   const [name, setName] = useState("");
@@ -114,7 +114,7 @@ const Contact = () => {
                     </div>
                     <div className="flex items-center gap-3 text-foreground/90">
                       <MessageCircle className="w-5 h-5 text-primary" />
-                      <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="hover:underline">(54) 93019-191</a>
+                      <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="hover:underline">(54) 9 9301-9191</a>
                     </div>
                     <div className="flex items-center gap-3 text-foreground/90">
                       <Instagram className="w-5 h-5 text-primary" />
