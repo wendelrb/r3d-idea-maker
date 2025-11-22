@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   // Define base path for GitHub Pages project site
   // Update this if you change the repository name
-  base: "/r3d-idea-maker/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
