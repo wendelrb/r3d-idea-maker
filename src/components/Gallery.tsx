@@ -17,7 +17,8 @@ const Gallery = () => {
         !/^img-/i.test(filename) &&
         filename !== "bonecosefiguras.jpg" &&
         filename !== "maquete.jpg" &&
-        filename !== "personalizacao-de-produtos.jpg"
+        filename !== "personalizacao-de-produtos.jpg" &&
+        filename !== "r3dimage.jpg"
       );
     })
     .sort((a, b) => {
