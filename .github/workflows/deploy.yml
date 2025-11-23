@@ -36,6 +36,9 @@ jobs:
       - name: Ensure CNAME
         run: echo xn--r3dsolucoespersonalizadas-39b46a.com.br > dist/CNAME
 
+      - name: Copy OG image
+        run: cp src/assets/gallery/r3dImage.jpg dist/r3dImage.jpg
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
