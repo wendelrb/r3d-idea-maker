@@ -83,7 +83,7 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-2xl sm:text-5xl md:text-7xl font-bold leading-tight">
               <span className="text-[hsl(0,0%,10%)]">R</span>
               <span className="text-primary">3D </span>
               <span className="text-[hsl(0,0%,10%)]">Soluções</span>
@@ -91,14 +91,14 @@ const Hero = () => {
               <span className="text-[hsl(0,0%,10%)]">Personalizadas</span>
             </h1>
             
-            <p className="text-xs sm:text-xl md:text-2xl text-foreground/90 leading-relaxed">
+            <p className="text-sm sm:text-xl md:text-2xl text-foreground/90 leading-relaxed pr-1 sm:pr-0">
               Impressão 3D feita sob medida para você. Damos vida às suas ideias com tecnologia e criatividade.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-2 pt-1 sm:pt-4">
               <Button 
                 size="default"
-                className="text-xs sm:text-lg px-4 py-3 sm:px-8 sm:py-6 group w-full sm:w-auto"
+                className="text-[12px] sm:text-lg px-3 py-2 sm:px-8 sm:py-6 group w-full sm:w-auto"
                 onClick={scrollToContact}
               >
                 Peça seu orçamento agora
@@ -107,7 +107,7 @@ const Hero = () => {
               <Button 
                 size="default"
                 variant="outline" 
-                className="text-xs sm:text-lg px-4 py-3 sm:px-8 sm:py-6 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-primary w-full sm:w-auto"
+                className="text-[12px] sm:text-lg px-3 py-2 sm:px-8 sm:py-6 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-primary w-full sm:w-auto"
                 onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Conheça nossos serviços
