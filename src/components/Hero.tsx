@@ -76,14 +76,14 @@ const Hero = () => {
           </div>
 
           {/* Conteúdo de Texto */}
-          <div className="space-y-2 sm:space-y-8 animate-in fade-in slide-in-from-right-4 duration-1000">
+          <div className="space-y-2 sm:space-y-8 animate-in fade-in slide-in-from-right-4 duration-1000 pr-12 sm:pr-0">
             <div className="inline-block">
               <span className="text-primary font-bold text-sm sm:text-lg tracking-wider uppercase">
                 Tecnologia 3D
               </span>
             </div>
             
-            <h1 className="text-[18px] sm:text-5xl md:text-7xl font-bold leading-snug sm:leading-tight">
+            <h1 className="text-[18px] sm:text-5xl md:text-7xl font-bold leading-snug sm:leading-tight max-w-[85%] sm:max-w-none">
               <span className="text-[hsl(0,0%,10%)]">R</span>
               <span className="text-primary">3D </span>
               <span className="text-[hsl(0,0%,10%)]">Soluções</span>
@@ -91,11 +91,11 @@ const Hero = () => {
               <span className="text-[hsl(0,0%,10%)]">Personalizadas</span>
             </h1>
             
-            <p className="text-[11px] sm:text-xl md:text-2xl text-foreground/90 leading-normal pr-3 sm:pr-0">
+            <p className="text-[11px] sm:text-xl md:text-2xl text-foreground/90 leading-normal max-w-[85%] sm:max-w-none">
               Impressão 3D feita sob medida para você. Damos vida às suas ideias com tecnologia e criatividade.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-2 pt-1 sm:pt-4">
+            <div className="flex flex-col sm:flex-row gap-2 pt-1 sm:pt-4 max-w-[85%] sm:max-w-none">
               <Button 
                 size="default"
                 className="text-[10px] sm:text-lg px-2 py-1 sm:px-8 sm:py-6 group w-full sm:w-auto"
