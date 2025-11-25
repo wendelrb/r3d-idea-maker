@@ -110,7 +110,7 @@ const Contact = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-3 text-foreground/90">
                       <Mail className="w-5 h-5 text-primary" />
-                      <a href="mailto:contato@r3dsolucoes.com" className="hover:underline">contato@r3dsolucoes.com</a>
+                      <a href="mailto:elizandrorangel06@gmail.com" className="hover:underline">elizandrorangel06@gmail.com</a>
                     </div>
                     <div className="flex items-center gap-3 text-foreground/90">
                       <MessageCircle className="w-5 h-5 text-primary" />
